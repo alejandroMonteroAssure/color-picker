@@ -1,67 +1,91 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+.head{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding-bottom: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.head header{
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-color-section{
+  display: flex;
+  gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.add-color-section input{
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid black; 
+  width: 15rem;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.add-color-section button{
+  border-radius: .5rem;
+  border: 1px solid black; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border: none;
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 .colors-list{
-  display: flex;
-  flex-direction: column;
+  width: 75vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
 }
 
 .color-element{
   display: flex;
-  flex-direction: row;
-  place-items: center;
-  gap: 1rem;
-  padding: .25rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 1rem;
-  border: 1px solid black;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 1px 5px 5px rgba(0,0,0, 0.25);
+  background-color: white;
 }
 
-.color-element p{
-  margin-left: 2rem;
+.color-btn{
+  background: var(--bg);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25), inset 0 0 0 rgba(0,0,0,0);
+  transform: translateY(0);
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
 }
 
-.color-background{
-  width: 1rem;
-  height: 1rem;
+.color-btn:hover{
+  filter: brightness(1.5);
+}
+
+.color-btn:active{
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px rgba(0,0,0, .2), inset 0 3px 6px rgba(0,0,0, 0.25);
 }
